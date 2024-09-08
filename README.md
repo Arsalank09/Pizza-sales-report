@@ -1,4 +1,11 @@
+DATA OF THE REPORT:-[pizza db.xlsx](https://github.com/user-attachments/files/16921335/pizza.db.xlsx)
+
+
+
+
+WORD DOC OF SQL QUERIES:-
 [Pizza sql project.docx](https://github.com/user-attachments/files/16918979/Pizza.sql.project.docx)
+
 
 A) KPI’S:- 
  
