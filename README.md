@@ -10,9 +10,12 @@ as Total_Revenue
 
 from pizza_sales; 
 
+ 
+ 
 
+ 
 
- 2)AVG ORDER VALUE:- 
+2)AVG ORDER VALUE:- 
 
 select  
 
@@ -24,50 +27,62 @@ from pizza_sales;
 
  
 
+ 
+
+ 
+
+ 
+
 3)Total pizza sold:- 
 
 select  SUM(quantity) as total_pizzza_sold from pizza_sales; 
 
-
+ 
+ 
 
 4)Total orders:- 
 select count(distinct order_id)as total_order 
 
 from pizza_sales; 
 
+ 
 
 5) Avg pizza per order  
 select  cast(cast(sum(quantity)as decimal (10,2)) / cast(count(distinct order_id) as decimal (10,2)) as decimal(10,2)) as Avg_pizza_per_order from pizza_sales; 
 
  
 
+ 
+
+ 
 
 B)CHART REQUIREMENTS 
 
- 1)DAILY TREND FOR TOTAL ORDERS 
+ 
+
+1)DAILY TREND FOR TOTAL ORDERS 
 
 SELECT  
 
-    TO_CHAR(order_date, 'Day') AS order_day,  
+   TO_CHAR(order_date, 'Day') AS order_day,  
 
-    COUNT(DISTINCT order_id) AS total_orders 
+   COUNT(DISTINCT order_id) AS total_orders 
 
 FROM  
 
-    pizza_sales 
+   pizza_sales 
 
 GROUP BY  
 
-    TO_CHAR(order_date, 'Day'), EXTRACT(DOW FROM order_date) 
+   TO_CHAR(order_date, 'Day'), EXTRACT(DOW FROM order_date) 
 
 ORDER BY  
 
-    EXTRACT(DOW FROM order_date); 
+   EXTRACT(DOW FROM order_date); 
 
  
 
 2)MONTHLY TREND OF TOTAL ORDERS 
-
 SELECT   
 
 TO_CHAR(order_date, 'MONTH') AS order_day,  COUNT(DISTINCT order_id) AS total_orders  
@@ -79,9 +94,11 @@ TO_CHAR(order_date, 'MONTH') AS order_day,  COUNT(DISTINCT order_id) AS total_or
 TO_CHAR(order_date, 'MONTH'), EXTRACT(MONTH FROM order_date)  
 
  ORDER BY   EXTRACT(MONTH FROM order_date); 
+
  
 
  
+
 3)PERCENTAGE OF SALES BY PIZZA CATEGORY 
 
 select pizza_category,sum(total_price)*100/ 
@@ -94,15 +111,27 @@ group by pizza_category
 
   
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
 4) BY PIZZA SIZE  
 
 SELECT pizza_size, 
 
-       cast(SUM(total_price) * 100.0 / 
+   cast(SUM(total_price) * 100.0 / 
 
-       (SELECT SUM(total_price) 
+   (SELECT SUM(total_price) 
 
-        FROM pizza_sales)as decimal(10,2)) AS pts 
+   FROM pizza_sales)as decimal(10,2)) AS pts 
 
 FROM pizza_sales 
 
@@ -119,6 +148,12 @@ SELECT pizza_category,sum(quantity)as total_quant
    FROM pizza_sales 
 
 GROUP BY pizza_category; 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -164,6 +199,7 @@ ORDER BY Total_orders DESC
 LIMIT 5; 
 
  
+
 7)BOTTOM 5  
 
 Total order 
@@ -192,6 +228,7 @@ ORDER BY Total_quantity asc
 LIMIT 5; 
 
  
+
 By revenue 
 
 SELECT pizza_name, SUM(total_price) AS Total_Revenue  
@@ -204,9 +241,16 @@ ORDER BY Total_Revenue asc
 
 LIMIT 5; 
 
+ 
 
+ 
 
- NOTE 
+ 
+
+ 
+
+NOTE 
+
  Want to apply the pizza_category or pizza_size filters to the above queries you can use WHERE clause. Follow some of below examples 
 
 SELECT Top 5 pizza_name, COUNT(DISTINCT order_id) AS Total_Orders 
@@ -218,6 +262,10 @@ WHERE pizza_category = 'Classic'
 GROUP BY pizza_name 
 
 ORDER BY Total_Orders ASC 
+
+ 
+
+ 
 
 
 
