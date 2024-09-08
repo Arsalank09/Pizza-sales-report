@@ -1,4 +1,5 @@
 [Pizza sql project.docx](https://github.com/user-attachments/files/16918979/Pizza.sql.project.docx)
+
 A) KPI’S:- 
  
 1) TOTAL REVENUE:- 
