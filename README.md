@@ -4,9 +4,10 @@
 
 
 
-
+# Home Page
 <img width="1509" alt="Screenshot 2024-09-07 at 3 34 18 PM" src="https://github.com/user-attachments/assets/6a5f63f0-0288-4f13-a08b-ba438104a58d">
 
+# 
  <img width="1509" alt="Screenshot 2024-09-07 at 3 34 40 PM" src="https://github.com/user-attachments/assets/4405abf0-1a0e-4bcd-9e96-a754504c7e3f">DATA OF THE REPORT:-[pizza db.xlsx](https://github.com/user-attachments/files/16921335/pizza.db.xlsx)
 
 
