@@ -1,4 +1,4 @@
-
+In this project, I took raw pizza sales data and performed data cleaning and transformation to ensure consistency and accuracy. I then developed an interactive Power BI dashboard that provides insights into key sales metrics, trends, and performance. The dashboard includes visualizations for total revenue, orders, and pizza category performance, allowing for easy analysis of best and worst-selling items, busiest sales periods, and customer preferences. This project demonstrates my ability to handle end-to-end data analysis, from cleaning to visualization.
 
  
 
